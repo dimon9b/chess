@@ -1,0 +1,121 @@
+/*  global styles */
+
+body {
+	text-align: center;
+}
+
+#chess {
+	border: 1px solid black;
+	display: inline-block;
+	font-size: 0;
+}
+
+#chess .chess-row {
+	display: block;
+}
+
+#chess .chess-row .chess-cell {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	font-size: 30px;
+	position: relative;
+}
+
+#chess .chess-row:nth-child(odd) .chess-cell:nth-child(odd) {
+	background: white;
+}
+
+#chess .chess-row:nth-child(odd) .chess-cell:nth-child(even) {
+	background: black;
+}
+
+#chess .chess-row:nth-child(even) .chess-cell:nth-child(odd) {
+	background: black;
+}
+
+#chess .chess-row:nth-child(even) .chess-cell:nth-child(even) {
+	background: white;
+}
+
+/*  figures styles */
+
+#chess .chess-row .chess-cell .chess_figure {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+#chess .chess-row .chess-cell .chess_figure.selected {
+	border: 2px solid yellow;
+	width: calc(100% - 4px);
+	height: calc(100% - 4px);
+}
+
+#chess .chess-row .chess-cell .pawn_white:before {
+	color: green;
+	content: 'P';
+}
+
+#chess .chess-row .chess-cell .pawn_black:before {
+	color: red;
+	content: 'P';
+}
+
+#chess .chess-row .chess-cell .rook_white:before {
+	color: green;
+	content: 'R';
+}
+
+#chess .chess-row .chess-cell .rook_black:before {
+	color: red;
+	content: 'R';
+}
+
+#chess .chess-row .chess-cell .horse_white:before {
+	color: green;
+	content: 'H';
+}
+
+#chess .chess-row .chess-cell .horse_black:before {
+	color: red;
+	content: 'H';
+}
+
+#chess .chess-row .chess-cell .elephant_white:before {
+	color: green;
+	content: 'E';
+}
+
+#chess .chess-row .chess-cell .elephant_black:before {
+	color: red;
+	content: 'E';
+}
+
+#chess .chess-row .chess-cell .queen_white:before {
+	color: green;
+	content: 'Q';
+}
+
+#chess .chess-row .chess-cell .queen_black:before {
+	color: red;
+	content: 'Q';
+}
+
+#chess .chess-row .chess-cell .king_white:before {
+	color: green;
+	content: 'K';
+}
+
+#chess .chess-row .chess-cell .king_black:before {
+	color: red;
+	content: 'K';
+}
